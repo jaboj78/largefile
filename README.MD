@@ -11,7 +11,7 @@ In the absence of a better solution, the problem was solved completing these tas
   * Create a line index for each part using PartsLineIndex.java
   * Concatenate all parts together again using FileConcat.java
    
-By use of the generate line index, an sax parse error line number can be mapped to a specific part and line number within this part, by use of this formula: [error lineno]-[part start lineno]+1
+By use of the generate line index, a sax parse error line number,can be mapped to a specific part and line number within this part, by use of this formula: [error lineno]-[part start lineno]+1
 
-In my specific case, a x1F byte in line 320.495.609 of a 3.055.336.991 lines large file, caused these utilities. By the way, the invalid byte removed from line 6.289.775 in part 40 :-)
+In the specific case, multiple x1F bytes caused the troble. Ex. the error in line 320.495.609 was corrected by  removing the byte from 6.289.775 in part 040 og 380 parts :-)
 

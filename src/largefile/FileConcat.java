@@ -41,7 +41,7 @@ public class FileConcat extends SimpleFileVisitor<Path> {
         Path path = Paths.get(arg[0]).normalize();
         Path outFile=Paths.get(arg[1]);
         Pattern pattern = Pattern.compile(arg[2].trim());
-        System.out.println("Contat files from '" + path + "' to '"+outFile +"' with regex patter '"+ arg[2].trim() +"'");
+        System.out.println("Contat files from '" + path + "' to '"+outFile +"' with regex pattern '"+ arg[2].trim() +"'");
         
         try(FileChannel out=FileChannel.open(outFile, StandardOpenOption.CREATE, StandardOpenOption.WRITE)) {
             Files.walkFileTree(path, new FileConcat(pattern, out));    
